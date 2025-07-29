@@ -32,9 +32,6 @@ pipeline {
             }
             post {
                 success {
-                    // macOS notification
-                    sh 'osascript -e \'display notification "✅ Deployment successful!" with title "Jenkins Alert"\''
-                    
                     // Linux notification
                     sh 'notify-send "Jenkins Alert" "✅ Deployment successful!"'
                 }
