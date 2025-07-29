@@ -27,7 +27,6 @@ pipeline {
                 script {
                     sh ''' 
                     echo "Hello Lakshman this is Deploy" 
-                    jjhk
                     '''
                 }
             }
