@@ -30,12 +30,6 @@ pipeline {
                     '''
                 }
             }
-            post {
-                success {
-                    // Linux notification
-                    sh 'notify-send "Jenkins Alert" "✅ Deployment successful!"'
-                }
-            }
         }
     }
 }
