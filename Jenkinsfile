@@ -28,14 +28,14 @@ pipeline {
         }
 
         stage('Deploy') {
-            input{
-                message 'should be continuee?'
-                ok 'Yes, we should go'
-                submit 'Lakshman'
-                parameters {
+                    input {
+            message 'Should we continue?'
+            ok 'Lakshman'
+            parameters {
                 string(name: 'PERSON', defaultValue: 'Mr Lakshman', description: 'Please enter your good name')
-              }
             }
+        }
+
             steps {
                 script {
                     sh '''
