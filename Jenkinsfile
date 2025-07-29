@@ -31,16 +31,16 @@ pipeline {
                 }
             }
         }
+    }
         post{
             always{
                 echo ' Deployment successfully completed'
             }
             failure{
-                echo 'Please check your deployment pipelines there is a error'
+                echo 'Please check your deployment pipelines there is an error'
             }
             success{
                 echo 'Your Deployment is successfully completed'
             }
         }
-    }
 }
