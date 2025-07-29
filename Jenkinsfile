@@ -28,6 +28,11 @@ pipeline {
         }
 
         stage('Deploy') {
+            input{
+                message 'should be continuee?'
+                ok 'Yes, we should go'
+                submit 'Lakshman'
+            }
             steps {
                 script {
                     sh '''
