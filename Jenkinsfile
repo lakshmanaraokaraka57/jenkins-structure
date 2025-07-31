@@ -9,10 +9,10 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                  
-                    bat "Hello Lakshman this is build"
-                    bat "${PERSON}"
-                   
+                    sh '''
+                    echo "Hello Lakshman this is build"
+                    echo "${PERSON}"
+                    '''
                 }
             }
         }
@@ -20,9 +20,9 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    
-                   bat "Hello Lakshman this is Test"
-                 
+                    sh '''
+                    echo "Hello Lakshman this is Test"
+                    '''
                 }
             }
         }
@@ -38,9 +38,9 @@ pipeline {
 
             steps {
                 script {
-                   
-                    bat "Hello Lakshman this is Deploy"
-                    
+                    sh '''
+                    echo "Hello Lakshman this is Deploy"
+                    '''
                 }
             }
         }
@@ -48,13 +48,13 @@ pipeline {
 
     post {
         always {
-            bat 'Deployment successfully completed'
+            echo 'Deployment successfully completed'
         }
         failure {
-            bat 'Please check your deployment pipelines, there is an error'
+            echo 'Please check your deployment pipelines, there is an error'
         }
         success {
-            bat 'Your Deployment is successfully completed'
+            echo 'Your Deployment is successfully completed'
         }
     }
 }
